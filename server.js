@@ -25,12 +25,12 @@ const PORT = 3001;
 // mongoose.set("useNewUrlParser", true);
 // mongoose.set("useFindAndModify", false);
 // mongoose.set("useCreateIndex", true);
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/takosu", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-  //useCreateIndex: true,
-  //useFindAndModify: false,
-//});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/rome-tacos", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 const connection = mongoose.connection;
 connection.on("connected", () => {
   console.log("mongoose successfully connected.");
